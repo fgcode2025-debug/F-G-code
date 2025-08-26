@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&G - code | Desarrollo Web Profesional</title>
+    <link rel="icon" href="logoempresa2025.png" type="image/png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Logo Section */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 20px;
+            max-width: 400px;
+            margin: 0 auto 3rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .logo-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(59,130,246,0.3)"/><circle cx="80" cy="80" r="1.5" fill="rgba(245,158,11,0.4)"/></svg>') repeat;
+            opacity: 0.5;
+        }
+
+        .tech-logo {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .letter-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: pulse 2s infinite;
+        }
+
+        .tech-letter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
+        .tech-ampersand {
+            font-size: 2rem;
+            color: #f59e0b;
+            font-weight: bold;
+            background: rgba(245, 158, 11, 0.1);
+            padding: 1rem;
+            border-radius: 50%;
+            border: 2px solid #f59e0b;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+            animation: pulse 2s infinite 0.5s;
+        }
+
+        .tech-tagline {
+            color: #e2e8f0;
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 320px;
+            line-height: 1.5;
+            position: relative;
+            z-index: 2;
+        }
+
+        .circuit-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #3b82f6, #f59e0b, transparent);
+            margin: 1rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #3b82f6, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #f59e0b;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+     
+
+        /* Contact Section */
+        .contact-section {
+            background: rgba(30, 41, 59, 0.3);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-section h2 {
+            color: #f59e0b;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-method {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: scale(1.05);
+        }
+
+        .contact-method i {
+            font-size: 2rem;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .contact-method h4 {
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-method p {
+            color: #e2e8f0;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #25D366;
+            animation: whatsapp-pulse 2s infinite;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(15, 23, 42, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            color: #e2e8f0;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #3b82f6, #f59e0b);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+        }
+
+        @keyframes whatsapp-pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <div class="tech-logo">
+                <div class="letter-container">
+                    <span class="tech-letter">F</span>
+                </div>
+                <span class="tech-ampersand">&</span>
+                <div class="letter-container">
+                    <span class="tech-letter">G</span>
+                </div>
+            </div>
+            <div class="circuit-line"></div>
+            <div class="tech-tagline">Tu planteas tu idea, nosotros la desarrollamos</div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Desarrollo Web Profesional</h1>
+            <p>Creamos páginas web modernas, responsivas y optimizadas para tu negocio</p>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Páginas Web informativas</h3>
+                <p>Ideales para presentar tu negocio, servicios y datos de contacto.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Paginas web personalizadas</h3>
+                <p>Diseños a la medida de cada cliente, con funciones especificas segun sus necesidades.</p>
+    </div>
+                
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Paginas web para emprendedores</h3>
+                <p>Soluciones economicas y efectivas para quienes comienzan con su proyecto.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-search"></i>
+                <h3>Tiendas en linea(E-commerce)</h3>
+                <p>Vende tus productos en internet con carrito de compras y pagos en linea.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Landing pages</h3>
+                <p>Paginas de una sola seccion, perfectas para promociones, campañas o captar clientes.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-headset"></i>
+                <h3>Blogs y portafolios</h3>
+                <p>Para compartir contenido, noticias o mostrar tus trabajos de forma atractiva.</p>
+            </div>
+           
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2>¡Contáctanos Ahora!</h2>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <p>+52 449 727 8898</p>
+                    <p>Respuesta inmediata</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>fgcode2025@gmail.com</p>
+                    <p>Cotizaciones detalladas</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <h4>Teléfono</h4>
+                    <p>+52 449 727 8898</p>
+                    <p>Lun - Sab: 9:00 - 20:00</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Oficina</h4>
+                    <p>Rincon de romos, AGS</p>
+                    <p>México</p>
+                </div>
+            </div>
+          <div class="publicidad"></div>
+            <h3>Recuerda tu cotizacion es totalmente gratuita.</h3>
+</body>
+</html>
