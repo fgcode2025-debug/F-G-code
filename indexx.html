@@ -168,7 +168,6 @@
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-     
 
         /* Contact Section */
         .contact-section {
@@ -219,41 +218,6 @@
 
         .contact-method p {
             color: #e2e8f0;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
-        }
-
-        .whatsapp-btn::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: #25D366;
-            animation: whatsapp-pulse 2s infinite;
         }
 
         /* Contact Form */
@@ -346,7 +310,32 @@
                 font-size: 1.2rem;
             }
         }
-      
+         .web-section {
+            background: rgba(30, 41, 59, 0.3);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+          .beneficios-section {
+            background: rgba(30, 41, 59, 0.3);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+         .web-section h2 {
+            color: #f59e0b;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+         .beneficios-section h2 {
+            color: #f59e0b;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
     </style>
 </head>
 <body>
@@ -363,7 +352,7 @@
                 </div>
             </div>
             <div class="circuit-line"></div>
-            <div class="tech-tagline">Tu planteas tu idea, nosotros la desarrollamos</div>
+            <div class="tech-tagline">Tú planteas tu idea, nosotros la desarrollamos</div>
         </div>
 
         <!-- Hero Section -->
@@ -371,87 +360,133 @@
             <h1>Desarrollo Web Profesional</h1>
             <p>Creamos páginas web modernas, responsivas y optimizadas para tu negocio</p>
             <br>
-                <h3><b>Recuerda hacemos tu cotizacion totalmente gratuita!!!</b></h3>
+            <h3><b>¡Recuerda! Hacemos tu cotización totalmente gratuita</b></h3>
         </div>
 
         <!-- Services Section -->
         <div class="services">
             <div class="service-card">
                 <i class="fas fa-laptop-code"></i>
-                <h3>Páginas Web informativas</h3>
+                <h3>Páginas Web Informativas</h3>
                 <p>Ideales para presentar tu negocio, servicios y datos de contacto.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-shopping-cart"></i>
-                <h3>Paginas web personalizadas</h3>
-                <p>Diseños a la medida de cada cliente, con funciones especificas segun sus necesidades.</p>
-    </div>
-                
+                <h3>Páginas Web Personalizadas</h3>
+                <p>Diseños a la medida de cada cliente, con funciones específicas según sus necesidades.</p>
+            </div>
             <div class="service-card">
                 <i class="fas fa-mobile-alt"></i>
-                <h3>Paginas web para emprendedores</h3>
-                <p>Soluciones economicas y efectivas para quienes comienzan con su proyecto.</p>
+                <h3>Páginas Web para Emprendedores</h3>
+                <p>Soluciones económicas y efectivas para quienes comienzan con su proyecto.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-search"></i>
-                <h3>Tiendas en linea(E-commerce)</h3>
-                <p>Vende tus productos en internet con carrito de compras y pagos en linea.</p>
+                <h3>Tiendas en Línea (E-commerce)</h3>
+                <p>Vende tus productos en internet con carrito de compras y pagos en línea.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-tachometer-alt"></i>
-                <h3>Landing pages</h3>
-                <p>Paginas de una sola seccion, perfectas para promociones, campañas o captar clientes.</p>
+                <h3>Landing Pages</h3>
+                <p>Páginas de una sola sección, perfectas para promociones, campañas o captar clientes.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-headset"></i>
-                <h3>Blogs y portafolios</h3>
+                <h3>Blogs y Portafolios</h3>
                 <p>Para compartir contenido, noticias o mostrar tus trabajos de forma atractiva.</p>
             </div>
-           
         </div>
 
         <!-- Contact Section -->
         <div class="contact-section">
             <h2>¡Contáctanos Ahora!</h2>
             
-           <div class="contact-methods">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/524497278898" target="_blank" class="contact-method">
-     <i class="fab fa-whatsapp"></i>
-     <h4>WhatsApp</h4>
-     <p>+52 449 727 8898</p>
-     <p>Respuesta inmediata</p>
-    </a>
-    </div>
-    <div class="contact-methods">
-    <a href="tel:+524497278898" class="contact-method">
-    <i class="fas fa-phone"></i>
-    <h4>Teléfono</h4>
-    <p>+52 449 727 8898</p>
-    <p>Lun - Sab: 9:00 - 20:00</p>
-    </a>
-    </div>
-      <div class="contact-methods">
-       <a href="https://mail.google.com/mail/?view=cm&to=fgcode2025@gmail.com" target="_blank" class="contact-method">
-    <i class="fas fa-envelope"></i>
-    <h4>Email</h4>
-    <p>fgcode2025@gmail.com</p>
-    <p>Cotizaciones detalladas</p>
-</a>
-      </div>
-
-      <div class="contact-methods">
-    <a href="https://www.google.com/maps/search/?api=1&query=Rincon+de+Romos,+AGS,+Mexico" target="_blank" class="contact-method">
-    <i class="fas fa-map-marker-alt"></i>
-    <h4>Oficina</h4>
-    <p>Rincon de Romos, AGS</p>
-    <p>México</p>
-    </a>
-    </div>
+            <div class="contact-methods">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/524497278898" target="_blank" class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <p>+52 449 727 8898</p>
+                    <p>Respuesta inmediata</p>
+                </a>
             </div>
-          
+            <div class="contact-methods">
+                <a href="tel:+524497278898" class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <h4>Teléfono</h4>
+                    <p>+52 449 727 8898</p>
+                    <p>Lun - Sáb: 9:00 - 20:00</p>
+                </a>
+            </div>
+            <div class="contact-methods">
+                <a href="https://mail.google.com/mail/?view=cm&to=fgcode2025@gmail.com" target="_blank" class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>fgcode2025@gmail.com</p>
+                    <p>Cotizaciones detalladas</p>
+                </a>
+            </div>
 
+            <div class="contact-methods">
+                <a href="https://www.google.com/maps/search/?api=1&query=Rincon+de+Romos,+AGS,+Mexico" target="_blank" class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Oficina</h4>
+                    <p>Rincón de Romos, AGS</p>
+                    <p>México</p>
+                </a>
+            </div>
+        </div>
 
-      
+        <div class="web-section">
+            <h2>¿Qué es una Página Web? </h2>
+            <br>
+            <p style="text-align: justify; text-justify: inter-word;">
+                Una página web es el espacio digital de tu negocio, como un local en internet.
+                Funciona como tu carta de presentación moderna, donde cualquier persona puede:
+                <br><br>
+                <b>Conocerte y saber qué ofreces.</b>
+                <br><br>
+                <b>Consultar tus servicios y precios.</b>
+                <br><br>
+                <b>Contactarte de manera rápida y sencilla desde su celular o computadora.</b>
+                <br><br>
+                <b>Está disponible 24 horas al día, los 7 días de la semana, sin importar si tu negocio físico está cerrado.</b>
+                <br><br>
+            </p>
+        </div>
+
+        <div class="beneficios-section">
+            <h2>Beneficios de tener una Página Web para tu Negocio</h2>
+            <br>
+            <p style="text-align: justify; text-justify: inter-word;">
+                <b>- Mayor visibilidad:</b>
+                <br><br>
+                Tus clientes pueden encontrarte fácilmente en Google y redes sociales.
+                <br><br>
+                <b>- Disponibilidad 24/7:</b>
+                <br><br>
+                Tu negocio nunca cierra, siempre estás presente para tus clientes.
+                <br><br>
+                <b>- Confianza y profesionalismo:</b>
+                <br><br>
+                Una web con un buen diseño transmite seriedad y genera credibilidad.
+                <br><br>
+                <b>- Más clientes y ventas:</b>
+                <br><br>
+                Tu negocio puede llegar a más personas, incluso fuera de tu zona.
+                <br><br>
+                <b>- Comunicación directa:</b>
+                <br><br>
+                Con botones de WhatsApp, correo o formulario, el cliente te contacta de inmediato.
+                <br><br>
+         <b>- Competitividad:</b>
+                <br><br>
+                Destaca frente a negocios que aún no tienen presencia online.
+                <br><br>
+                <b>- Flexibilidad:</b>
+                <br><br>
+                Puedes actualizar información, promociones o productos fácilmente.
+            </p>
+</div>    
 </body>
 </html>
